@@ -1,0 +1,4 @@
+<img data-src="{{ post.media.image.square | prepend: '/uploads/news/600x600_crop_center-center_none/' | append: '.jpg' }}"
+	data-srcset="{{ post.media.image.square | prepend: '/uploads/news/600x600_crop_center-center_none/' | append: '.jpg' }}, {{ post.media.image.square2x | prepend: '/uploads/news/1000x1000_crop_center-center_none/' | append: '.jpg' }} 2x"
+	class="block absolute left-0 top-0 object-cover w-full h-full lazyload" />
+<div class="animated-background {{ post.animatiedbg | prepend: 'bg-' }}"></div>

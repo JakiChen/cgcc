@@ -1,0 +1,130 @@
+{% include utils/var.seo.liquid %}
+{%- include externals/google_analytics.liquid -%}
+
+<title>{{ PAGE_TITLE }}</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+<meta name="referrer" content="origin-when-cross-origin" />
+{%- comment -%}SEO{%- endcomment -%}
+<meta name="keywords" content="design, agency, studios, branding, york, Chapiter, francisco">
+<meta name="description" content="{{ PAGE_DESCRIPTION }}">
+<meta name="referrer" content="no-referrer-when-downgrade">
+<meta name="robots" content="all">
+{%- comment -%}Favicons{%- endcomment -%}
+<link rel="apple-touch-icon" sizes="180x180" href="{{ '/src/assets/icons/apple-touch-icon.png' | relatvie_url }}">
+<link rel="icon" type="image/png" sizes="192x192" href="{{ '/src/assets/icons/android-chrome-192x192.png' | relative_url }}">
+<link rel="icon" type="image/png" sizes="512x512" href="{{ '/src/assets/icons/android-chrome-512x512.png' | rleative_url }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ '/src/assets/icons/favicon-32x32.png' | rleative_url }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ '/src/assets/icons/favicon-16x16.png' | relative_url }}">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="theme-color" content="#ffffff">
+{%- comment -%}Styles{%- endcomment -%}
+<link href="{{ '/src/assets/css/main.css?v=1.0' | relative_url }}" rel="stylesheet">
+{%- comment -%}Facebook{%- endcomment -%}
+<meta content="375194312510" property="fb:profile_id">
+<meta content="en_US" property="og:locale">
+<meta content="Chapiter" property="og:site_name">
+<meta content="website" property="og:type">
+<meta content="{{ site.url }}/" property="og:url">
+<meta content="Home" property="og:title">
+<meta content="{{ PAGE_DESCRIPTION }}"
+	property="og:description">
+<meta content="{{ site.url }}/uploads/_1200x630_crop_center-center_82_none/Chapiter_branding_agency_reel.jpg?mtime=1578417383"
+	property="og:image">
+<meta content="1200" property="og:image:width">
+<meta content="630" property="og:image:height">
+<meta content="{{ PAGE_DESCRIPTION }}"
+	property="og:image:alt">
+<meta content="https://www.linkedin.com/company/306649/admin/" property="og:see_also">
+<meta content="https://twitter.com/Chapiterdotco" property="og:see_also">
+<meta content="https://www.instagram.com/Chapiterdotco/" property="og:see_also">
+{%- comment -%}Twitter Card{%- endcomment -%}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Chapiterdotco">
+<meta name="twitter:creator" content="@Chapiterdotco">
+<meta name="twitter:title" content="Home">
+<meta name="twitter:description"
+	content="{{ PAGE_DESCRIPTION }}">
+<meta name="twitter:image"
+	content="{{ site.url }}/uploads/_800x418_crop_center-center_82_none/Chapiter_branding_agency_reel.jpg?mtime=1578417383">
+<meta name="twitter:image:width" content="800">
+<meta name="twitter:image:height" content="418">
+<meta name="twitter:image:alt"
+	content="{{ PAGE_DESCRIPTION }}">
+<link href="{{ site.url }}/" rel="canonical">
+<link href="{{ site.url }}/" rel="home">
+<link type="text/plain" href="/humans.txt" rel="author">
+{%- comment -%}SEO Generater{%- endcomment -%}
+<script type="application/ld+json">
+	{
+		"@context": "{{ site.url }}schema.org",
+		"@graph": [{
+			"@type": "WebPage",
+			"author": {
+				"@id": "{{ site.url }}#identity"
+			},
+			"copyrightHolder": {
+				"@id": "{{ site.url }}#identity"
+			},
+			"copyrightYear": "{{ 'now' | date: '%Y' }}",
+			"creator": {
+				"@id": "{{ site.url }}#creator"
+			},
+			"dateModified": "2020-07-07T11:24:06-07:00",
+			"datePublished": "2020-07-06T12:52:00-07:00",
+			"description": "{{ PAGE_DESCRIPTION }} ",
+			"headline": "Privacy And Cookie Policy",
+			"image": {
+				"@type": "ImageObject",
+				"url": "{{ site.url }}/uploads/_1200x630_crop_center-center_82_none/Chapiter_branding_agency_reel.jpg?mtime=1578417383"
+			},
+			"inLanguage": "en-us",
+			"mainEntityOfPage": "{{ site.url }}/privacy-policy",
+			"name": "Privacy And Cookie Policy",
+			"publisher": {
+				"@id": "{{ site.url }}#creator"
+			},
+			"url": "{{ site.url }}/privacy-policy"
+		}, {
+			"@id": "{{ site.url }}#identity",
+			"@type": "LocalBusiness",
+			"description": "{{ PAGE_DESCRIPTION }}",
+			"email": "info@{{ site.url }}",
+			"image": {
+				"@type": "ImageObject",
+				"height": "3750",
+				"url": "{{ site.url }}/uploads/Chapiter_branding_agency_reel.jpg",
+				"width": "6667"
+			},
+			"logo": {
+				"@type": "ImageObject",
+				"height": "60",
+				"url": "{{ site.url }}/uploads/_600x60_fit_center-center_82_none/177908/Chapiter_branding_agency_reel.png?mtime=1578417383",
+				"width": "107"
+			},
+			"name": "Chapiter",
+			"priceRange": "$",
+			"sameAs": [{{ site.social.links | join: "," }}],
+			"url": "{{ site.url }}"
+		}, {
+			"@id": "#creator",
+			"@type": "Organization"
+		}, {
+			"@type": "BreadcrumbList",
+			"description": "Breadcrumbs list",
+			"itemListElement": [{
+				"@type": "ListItem",
+				"item": "{{ site.url }}/",
+				"name": "Home",
+				"position": 1
+			}, {
+				"@type": "ListItem",
+				"item": "{{ site.url }}/privacy-policy",
+				"name": "Privacy And Cookie Policy",
+				"position": 2
+			}],
+			"name": "Breadcrumbs"
+		}]
+	}
+</script>

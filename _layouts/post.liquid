@@ -1,0 +1,43 @@
+---
+layout: default
+---
+<div class="w-full gutter-b">
+	<div class="w-full  js-media" data-id="{{ page.id }}">
+		<div class="block aspect-ratio-20/9 relative overflow-hidden">
+
+			<div class="block absolute w-full h-full top-0 left-0 z-30 js-image ">
+				<img class="w-full h-full object-cover lazyload text-white"
+					data-src="{{ page.media.image.cover | prepend: '/uploads/news/' | append: '.jpg' }}" class="w-full h-full object-cover lazyload"
+					alt="{{ page.coverimg | replace: '_', ' ' | capitalize_all }}" data-id="{{ page.id }}" />
+
+			</div>
+
+			<div class="animated-background {{ page.animatiedbg | prepend: 'bg-' }}"></div>
+		</div>
+	</div>
+</div>
+
+<div class="flex flex-col md:flex-row md:flex-wrap gutter-x  gutter-b  ">
+	<div class="w-full md:w-3/4 gutter-x pb-4 md:pb-8 xl:pb-10 xxl:pb-12 w-full ">
+		<h1 class="text-headline">{{ page.title }}</h1>
+	</div>
+	<div class="w-full md:w-1/4 gutter-x gutter-b pt-1">
+		<ul>
+			<li>{{ page.date | date: '%B %d, %Y' }}</li>
+		</ul>
+	</div>
+	<div class="w-full md:w-1/2 gutter-x gutter-b-med copy ">
+		{{ content }}
+	</div>
+	<div class="w-full md:w-1/2  copy flex flex-row justify-end ">
+		<div class="w-1/2 gutter-x gutter-b-med">
+			<ul>
+				{% for link in page.links %}
+					<li>+ <a href="{{ link.url }}" class="underline" target="_blank">{{ link.title }}</a></li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+</div>
+
+{% include module/news/more.liquid %}

@@ -1,0 +1,17 @@
+---
+#layout: compress
+---
+<!DOCTYPE html>
+<html lang="en-US" class="{{ page.mode | prepend: 'mode-' }}">
+<head>
+	{% include main/head.liquid %}
+</head>
+<body class="ltr font-body text-base md:text-md xl:text-lg xxl:text-xl leading-tight md:leading-tightest xl:leading-tighter xxl:leading-tight  dark:bg-black dark:text-white {{ page.bgcolor | prepend: 'bg-' }}">
+	{% include main/header.liquid %}
+	<main class="flex flex-row flex-wrap">
+		{{ content }}
+	</main>
+	{% include main/footer.liquid %}
+	{% include main/foot.liquid %}
+</body>
+</html>

@@ -1,0 +1,32 @@
+<div class="flex flex-row flex-wrap w-full gutter-x mb-20 md:mb-25 xl:mb-30 xxl:mb-50">
+	<div class="w-full md:w-1/4 gutter-x mb-15 md:mb-0">
+		<p>{{ site.data.en_GB.about_US.ethos.why.title }}</p>
+	</div>
+
+	<div class="w-full md:w-3/4 gutter-x">
+		<p class="text-headline md:-mt-2 xl:-mt-3">
+			{{ site.data.en_GB.about_US.ethos.why.content }}
+		</p>
+	</div>
+</div>
+
+<div class="flex flex-col w-full gutter-x mb-15 md:mb-25 xl:mb-30 xxl:mb-50">
+	<div class="flex flex-row flex-wrap md:mb-20">
+		<div class="w-full md:w-1/4 gutter-x mb-15 md:mb-0">
+			<p>{{ site.data.en_GB.about_US.ethos.how.title }}</p>
+		</div>
+{% for note in site.data.en_GB.about_US.ethos.how.notes %}
+	{%- unless firstloop -%}
+	<div class="flex flex-row flex-wrap md:mb-20">
+		<div class="w-full md:w-1/4 gutter-x mb-10 hidden md:block md:mb-0">
+		</div>
+	{%- endunless -%}
+		<div class="w-full md:w-1/2 gutter-x mb-5 md:mb-0">
+			<p class="text-headline md:-mt-2 xl:-mt-3">{{ note.title }}</p>
+		</div>
+		<div class="w-full md:w-1/4 gutter-x mb-10 md:mb-0">
+			<p class="">{{ note.content }}</p>
+		</div>
+	</div>
+{% endfor %}
+</div>

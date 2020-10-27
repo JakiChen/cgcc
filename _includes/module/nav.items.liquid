@@ -1,0 +1,23 @@
+
+<li class=" nav-item hover:underline">
+	<a href="/about" class="{% if page.url contains '/about' %}underline js-active{% endif %}">About</a>
+</li>
+<li class=" nav-item hover:underline">
+	<a href="/work" class="{% if page.url contains '/work' %}underline js-active{% endif %}">Work</a>
+</li>
+<li class=" nav-item hover:underline">
+	<a href="/perspectives"
+		class="{% if page.url contains '/perspectives' %}underline js-active{% endif %}">Perspectives</a>
+</li>
+<li class=" nav-item hover:underline">
+	<a href="/101" class="{% if page.url contains '/101' %}underline js-active{% endif %}">101</a>
+</li>
+<li class=" nav-item hover:underline">
+	<a href="/news" class="{% if page.url contains '/news' %}underline js-active{% endif %}">News</a>
+</li>
+<li class=" nav-item hover:underline">
+	<a href="/careers" class="{% if page.url contains '/careers' %}underline js-active{% endif %}">Careers</a>
+</li>
+<li class="md:hidden js-home nav-item hover:underline">
+	<a href="/" class="{% if page.title contains 'Home' %}underline js-active{% endif %}">Home</a>
+</li>

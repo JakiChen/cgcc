@@ -1,0 +1,20 @@
+<div class="bg-gray w-full">
+	<div class="mb-25 w-full">&nbsp;</div>
+	{% for job in site.careers %}
+		<div class="w-full flex flex-col lg:flex-row md:items-end gutter-x py-10 md:py-15 lg:py-25 xxl:py-30">
+			<div class="w-full  lg:w-3/4 gutter-x">
+				<h2 class="text-headline mb-10 lg:mb-0">{{ job.title }}<br />{{ job.jobinfo.location }}</h2>
+			</div>
+			<div class="w-full  lg:w-1/4 gutter-x ">
+				<a href="{{ job.url }}"><span class="underline">View job description</span></a>
+			</div>
+		</div>
+		{% unless forloop.last %}
+			<div class="mx-3 md:mx-6 xl:mx-8 xxl:mx-10">
+				<hr class="w-full border-t border-black" />
+			</div>
+		{% endunless %}
+	{% endfor %}
+</div>
+
+{% include module/careers/index.image.liquid %}

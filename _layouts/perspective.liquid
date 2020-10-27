@@ -1,0 +1,194 @@
+---
+layout: default
+---
+
+
+<div class="w-full gutter-b">
+	<div class="section block w-full aspect-ratio-2/3 md:aspect-ratio-20/9 overflow-hidden bg-blue relative"
+		data-aos="fade-right">
+		<div class="absolute left-0 top-0 w-full h-full flex flex-col justify-end gutter-x ">
+			<div class="flex flex-row md:items-stretch md:h-full">
+				<div class="w-1/2 md:w-1/4 flex flex-col justify-start md:justify-end gutter-b gutter-x">
+					<img src="../uploads/Perspectives_Icons/Perspectives_Icon_Interviews_03.gif"
+						class="block w-1/3 h-auto mt-5" />
+				</div>
+
+				<div class="w-1/2 md:w-3/4 gutter-x relative flex flex-col justify-start md:justify-end">
+					<h2 class="text-5xl xl:text-8xl xxl:text-9xl leading-none  tracking-tighter xl:tracking-tightest">
+						9</h2>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<div class="flex flex-col md:flex-row md:flex-wrap gutter-x w-full gutter-t-med gutter-b-med ">
+	<div class="w-full md:w-3/4 gutter-x gutter-b ">
+		<h1 class="text-headline">{{ page.title }}</h1>
+	</div>
+	<div class="w-full md:w-1/4 gutter-x gutter-b">
+		<ul>
+			<li>by {{ page.author.name }}<br />{{ page.author.title }}</li>
+			<li>{{ page.date | date: '%B %d, %Y' }}</li>
+		</ul>
+	</div>
+</div>
+
+<div class="flex flex-col md:flex-row md:flex-wrap gutter-x mb-15 w-full gutter-b">
+	{{ content }}
+	{% if s1 %}
+		<div class="w-full md:w-1/2 gutter-x gutter-b-med copy ">
+			{{ s1 | markdownify }}
+		</div>
+	{% endif %}
+	{% if s2 %}
+		<div class="w-full md:w-1/2 gutter-x gutter-b-med copy ">
+			{{ s2 | markdownify }}
+			this is section2
+		</div>
+	{% endif %}
+</div>
+
+
+<div class="w-full flex flex-row flex-wrap gutter-x gutter-b-med gutter-t-large">
+	<div class="w-full md:w-3/4 mb-5 gutter-x">
+		<h2 class="text-big ">More</h2>
+	</div>
+	<div class="w-1/2 md:hidden"></div>
+</div>
+
+<!-- get related entries -->
+<div class="flex flex-row flex-wrap gutter-x gutter-b-large">
+	<div class="w-1/2 md:w-1/4">&nbsp;</div>
+
+	<a href="founders-in-conversations.html" class="block w-1/2 md:w-1/4 text-xl gutter-x gutter-b group "
+		data-aos="fade-up" data-aos-delay="0">
+		<div class="relative aspect-ratio-square overflow-hidden mb-2 bg-yellow ">
+			<div class="absolute w-full h-full top-0 left-0 flex flex-col justify-between">
+				<div class="w-full text-right gutter-x gutter-b gutter-y">
+					<h2 class="text-1xl md:text-2xl xl:text-3xl xxl:text-4xl  tracking-tighter ">1</h2>
+				</div>
+				<div class="w-full gutter-x gutter-y ">
+					<img data-src="../uploads/Perspectives/Icons/Perspectives_Icon_Interviews_01.gif"
+						class="block w-1/4 h-auto lazyload" />
+				</div>
+			</div>
+		</div>
+		<div class="text-base md:text-md xl:text-lg xxl:text-xl group-hover:underline ">
+			<h4 class="mb-4">c| Interview</h4>
+			<h4 class="underline">Founders in Conversation</h4>
+			<p>Reflecting on 20 years of design, excitement, and collaboration. To celebrate our 20th anniversary,
+				we
+				spoke to our co-founders: Tish, Ben, and Rishi.</p>
+		</div>
+	</a>
+
+	<a href="how-to-brand-a-pipe-dream.html" class="block w-1/2 md:w-1/4 text-xl gutter-x gutter-b group "
+		data-aos="fade-up" data-aos-delay="200">
+		<div class="relative aspect-ratio-square overflow-hidden mb-2 bg-yellow ">
+			<div class="absolute w-full h-full top-0 left-0 flex flex-col justify-between">
+				<div class="w-full text-right gutter-x gutter-b gutter-y">
+					<h2 class="text-1xl md:text-2xl xl:text-3xl xxl:text-4xl  tracking-tighter ">4</h2>
+				</div>
+				<div class="w-full gutter-x gutter-y ">
+					<img data-src="../uploads/Perspectives/Icons/Perspectives_Icon_Articles_04.gif"
+						class="block w-1/4 h-auto lazyload" />
+				</div>
+			</div>
+		</div>
+		<div class="text-base md:text-md xl:text-lg xxl:text-xl group-hover:underline ">
+			<h4 class="mb-4">c| Article</h4>
+			<h4 class="underline">How to Brand a Pipe Dream</h4>
+			<p>How branding differs when you work with founders.</p>
+		</div>
+	</a>
+
+	<a href="conjure-insight-to-idea.html" class="block w-1/2 md:w-1/4 text-xl gutter-x gutter-b group "
+		data-aos="fade-up" data-aos-delay="400">
+		<div class="relative aspect-ratio-square overflow-hidden mb-2 bg-blue ">
+			<div class="absolute w-full h-full top-0 left-0 flex flex-col justify-between">
+				<div class="w-full text-right gutter-x gutter-b gutter-y">
+					<h2 class="text-1xl md:text-2xl xl:text-3xl xxl:text-4xl  tracking-tighter ">6</h2>
+				</div>
+				<div class="w-full gutter-x gutter-y ">
+					<img data-src="../uploads/Perspectives_Icons/Perspectives_Icon_Articles_01.gif"
+						class="block w-1/4 h-auto lazyload" />
+				</div>
+			</div>
+		</div>
+		<div class="text-base md:text-md xl:text-lg xxl:text-xl group-hover:underline ">
+			<h4 class="mb-4">c| Interview</h4>
+			<h4 class="underline">Conjure: Insight to Idea</h4>
+			<p></p>
+		</div>
+	</a>
+
+	<a href="core-behind-a-brand-launch.html" class="block w-1/2 md:w-1/4 text-xl gutter-x gutter-b group "
+		data-aos="fade-up" data-aos-delay="600">
+		<div class="relative aspect-ratio-square overflow-hidden mb-2 bg-yellow ">
+			<div class="absolute w-full h-full top-0 left-0 flex flex-col justify-between">
+				<div class="w-full text-right gutter-x gutter-b gutter-y">
+					<h2 class="text-1xl md:text-2xl xl:text-3xl xxl:text-4xl  tracking-tighter ">7</h2>
+				</div>
+				<div class="w-full gutter-x gutter-y ">
+					<img data-src="../uploads/Perspectives_Icons/Perspectives_Icon_Interviews_01.gif"
+						class="block w-1/4 h-auto lazyload" />
+				</div>
+			</div>
+		</div>
+		<div class="text-base md:text-md xl:text-lg xxl:text-xl group-hover:underline ">
+			<h4 class="mb-4">c| Interview</h4>
+			<h4 class="underline">Core: Behind a Brand Launch</h4>
+			<p></p>
+		</div>
+	</a>
+
+	<a href="the-power-of-a-single-story.html" class="block w-1/2 md:w-1/4 text-xl gutter-x gutter-b group "
+		data-aos="fade-up" data-aos-delay="800">
+		<div class="relative aspect-ratio-square overflow-hidden mb-2 bg-cyan ">
+			<div class="absolute w-full h-full top-0 left-0 flex flex-col justify-between">
+				<div class="w-full text-right gutter-x gutter-b gutter-y">
+					<h2 class="text-1xl md:text-2xl xl:text-3xl xxl:text-4xl  tracking-tighter ">8</h2>
+				</div>
+				<div class="w-full gutter-x gutter-y ">
+					<img data-src="../uploads/Perspectives_Icons/Perspectives_Icon_WrittenEssays_02.gif"
+						class="block w-1/4 h-auto lazyload" />
+				</div>
+			</div>
+		</div>
+		<div class="text-base md:text-md xl:text-lg xxl:text-xl group-hover:underline ">
+			<h4 class="mb-4">c| Article</h4>
+			<h4 class="underline">The Power of a Single Story</h4>
+			<p></p>
+		</div>
+	</a>
+	<div class="w-1/2 md:w-1/4">&nbsp;</div>
+
+	<a href="how-to-blow-up-your-creative-process.html" class="block w-1/2 md:w-1/4 text-xl gutter-x gutter-b group "
+		data-aos="fade-up" data-aos-delay="1000">
+		<div class="relative aspect-ratio-square overflow-hidden mb-2 bg-blue ">
+			<div class="absolute w-full h-full top-0 left-0 flex flex-col justify-between">
+				<div class="w-full text-right gutter-x gutter-b gutter-y">
+					<h2 class="text-1xl md:text-2xl xl:text-3xl xxl:text-4xl  tracking-tighter ">2</h2>
+				</div>
+				<div class="w-full gutter-x gutter-y ">
+					<img data-src="../uploads/Perspectives/Icons/Perspectives_Icon_Articles_03.gif"
+						class="block w-1/4 h-auto lazyload" />
+				</div>
+			</div>
+		</div>
+		<div class="text-base md:text-md xl:text-lg xxl:text-xl group-hover:underline ">
+			<h4 class="mb-4">c| Article</h4>
+			<h4 class="underline">How to Blow Up Your Creative Process</h4>
+			<p>Why doing better means doing different.</p>
+		</div>
+	</a>
+
+</div>
+
+<div class="flex flex-row w-full justify-end gutter-x gutter-b-large">
+	<div class="w-1/2 md:w-1/4 gutter-x">
+		<a href="/perspectives/" class="underline">+ Read all Perspectives</a>
+	</div>
+</div>

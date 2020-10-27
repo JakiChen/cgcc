@@ -1,0 +1,6 @@
+{%- assign filter = page.title -%}
+{% if filter == '404' %}
+	{% include module/headline/404.hero.headline.liquid %}
+{% else %}
+	{% include module/headline/hero.headline.liquid %}
+{% endif %}

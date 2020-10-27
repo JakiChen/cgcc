@@ -1,0 +1,23 @@
+<div class="w-full gutter-x  flex flex-row flex-wrap  pt-12 pb-15 lg:pt-10 lg:pb-10 overflow-hidden">
+	<div class="w-full md:w-3/4 gutter-x gutter-b">
+		<h2 class="text-headline">{{ page.subtitle }}</h2>
+	</div>
+	<div class="w-full gutter-x md:w-1/2">
+		<div class="-gutter-x flex flex-row flex-wrap pt-12 lg:pt-0 pb-12 lg:pb-0 ">
+			<div class="w-full sm:w-1/2 gutter-x gutter-b">
+				{{ page.backgroud.title }}
+			</div>
+			<div class="w-full sm:w-1/2 gutter-x gutter-b copy">
+				<p>{{ page.backgroud.summary }}</p>
+			</div>
+		</div>
+	</div>
+	<div class="w-1/2 md:block md:w-1/4"></div>
+	<div class="w-1/2 gutter-x md:w-1/4 gutter-b pt-3 lg:pt-0">
+		<ul>
+		{% for service in page.services %}
+			<li>{{ service }}</li>
+		{% endfor %}
+		</ul>
+	</div>
+</div>

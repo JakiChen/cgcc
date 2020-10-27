@@ -1,0 +1,188 @@
+{
+	"title": "chapiter",
+	"description": "Chapiter is a global group of experts, dedicated to digital experience and brand strategy design.",
+	"keywords": [
+		"chapiter",
+		"branding",
+		"UX/UI",
+		"User Experience",
+		"strategy"
+	],
+	"pages": [
+		{
+			"title": "home",
+			"slug": "/slug/",
+			"headline": "Chapiter is a branding and design agency with studios in New York and San Francisco.",
+			"summary": {
+				"content": "<a href=\"/about\" class=\"underline\">About Us</a>",
+				"position": "items-end"
+			}
+		},
+		{
+			"title": "about",
+			"slug": "/about/",
+			"headline": "We work together and toward. To bring ideas to life. With intention and meaning. For today, tomorrow, and beyond.",
+			"summary": {
+				"content": "Our team of strategists, writers, and designers define, create, and activate systems that change behaviors and power tomorrow’s brands.",
+				"position": "items-start"
+			}
+		},
+		{
+			"title": "work",
+			"slug": "/work/",
+			"headline": "Partnerships with beloved brands and category leaders.",
+			"summary": {
+				"position": "",
+				"content": ""
+			}
+		},
+		{
+			"title": "perspectives",
+			"slug": "/perspectives/",
+			"headline": "POVs on design and our industry.",
+			"summary": {
+				"position": "",
+				"content": ""
+			}
+		},
+		{
+			"title": "101",
+			"slug": "/101/",
+			"headline": "101 is a multi-faceted experimental space, designed to bridge ideas across art, culture, and technology.",
+			"summary": {
+				"position": "",
+				"content": ""
+			}
+		},
+		{
+			"title": "news",
+			"slug": "/news/",
+			"headline": "Industry talk, happenings around Character, and the odd creative experiment.",
+			"summary": {
+				"position": "",
+				"content": ""
+			}
+		},
+		{
+			"title": "careers",
+			"slug": "/careers/",
+			"headline": "Driven and curious minds welcome.",
+			"summary": {
+				"position": "",
+				"content": ""
+			}
+		},
+		{
+			"title": "privacy and cookie policy",
+			"slug": "/privacy-policy/",
+			"headline": "Privacy And Cookie Policy",
+			"summary": {
+				"content": "Character's Privacy Notice Last update Otc. 07, 2020",
+				"position": "items-end"
+			}
+		}
+	],
+	"about_US": {
+		"business_mail":"newbiz[at]chapiter.cc",
+		"office": {
+			"basecamp": {
+				"title": "PEK",
+				"location": "Beijing",
+				"addr": [
+					"No. 14, Xiaoguandongli",
+					"Chaoyang District",
+					"Beijing, China"
+				],
+				"image": "chapiter_office_basecamp"
+			},
+			"global": {
+				"title": "PAR",
+				"location": "Paris",
+				"addr": [
+					"Virtual Cloud Office",
+					"No Address",
+					"Paris, France"
+				],
+				"image": "chapiter_office_global"
+			}
+		},
+		"capabilities": [
+			{
+				"title": "Brand Strategy",
+				"services": [
+					"Research & Consumer Insights",
+					"Brand Positioning",
+					"Brand Architecture",
+					"Category Definition",
+					"Culture & Engagement",
+					"Go-to-Market Strategy",
+					"Content Strategy"
+				]
+			},
+			{
+				"title": "Brand Identity",
+				"services": [
+					"Visual Identity Systems",
+					"Verbal Identity Systems",
+					"Naming & Nomenclature",
+					"Brand System Guidelines",
+					"UX/UI Design",
+					"Motion Design",
+					"Sound Design"
+				]
+			},
+			{
+				"title": "Brand Experience",
+				"services": [
+					"Website Design & Copy",
+					"Mobile App Design & Copy",
+					"Service Design",
+					"Environmental Design",
+					"Packaging Systems",
+					"Brand Campaigns"
+				]
+			}
+		],
+		"ethos":{
+			"why":{
+				"title":"Why",
+				"content":"Creativity requires <br /> conviction. <br /> Every distinct voice <br /> helps us forward. <br /> Doing better means <br /> doing different."
+			},
+			"how":{
+				"title":"How",
+				"notes":[
+					{
+						"title":"We explore voraciously.",
+						"content":"We explore without rules, without boundaries, and without fear. We push ourselves—testing the limits of imagination and feeding our curiosity for the world around us."
+					},
+					{
+						"title": "We explore voraciously.",
+						"content": "We make space for voices and perspectives to come together through creative exploration. With in and unexpected."
+					},
+					{
+						"title": "We choose to contribute.",
+						"content": "As humans in this world and as people at this company, we take pride in the way we contribute. We require it of others and we require it of ourselves. We’re here to build something together."
+					}
+				]
+			}
+		},
+		"social":[
+			{
+				"name":"Behance",
+				"url":"https://behance.net/chapiter"
+			},
+			{
+				"name": "Github",
+				"url": "https://github.com/chapiter"
+			},
+			{
+				"name": "Instagram",
+				"url": "https://instagram.com/chapiter"
+			},
+			{
+				"name": "LinkedIn",
+				"url": "https://linkedin.com/company/chapiter"
+			}
+		]
+	}
+}

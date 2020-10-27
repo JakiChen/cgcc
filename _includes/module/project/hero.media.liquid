@@ -1,0 +1,42 @@
+{%- assign CDN = 'https://character.co/uploads/Work/' -%}
+{%- assign SUB_URL = page.title | capitalize | append: '/' -%}
+{%- assign ABS_URL = CDN | append: SUB_URL -%}
+
+<div class="">
+	<div class="block ">
+		<div class="w-full gutter-b js-media" data-js-module="video" data-id="{{ page.id }}">
+			<div class="block aspect-ratio-16/9 relative overflow-hidden">
+
+				{%- if page.heromedia.vimeo !="" -%}
+					<div class="z-10 video-container js-full-video-player" data-video-id="{{ page.heromedia.vimeo.fullvideo_id }}"></div>
+					<div class="z-20 video-container js-video-player" data-video-id=""{{ page.heromedia.vimeo.video_id }}"></div>
+				{%- endif -%}
+
+				<div class="block absolute w-full h-full top-0 left-0 z-30 js-image ">
+					<img class="w-full h-full object-cover lazyload text-white"
+						data-src="{{ page.heromedia.poster | prepend: ABS_URL | append: '.jpg' }}"
+						class="w-full h-full object-cover lazyload" alt="{{ page.heromedia.poster | replace: '_', ' ' | capitalize_all }}"
+						data-id="{{ page.id }}" />
+				</div>
+
+				{%- if page.heromedia.vimeo !="" -%}
+				<div
+					class="absolute z-40 w-full h-full justify-bottom pb-10 flex flex-col justify-end js-overlay cursor-pointer">
+					<div class="w-full md:w-1/4  flex flex-col text-white absolute z-10 bottom-0 left-0 gutter-x gutter-b">
+						<div class="gutter-x inline-flex flex-col">
+							<a href="#" class="js-play inline-block">
+								<svg class="svg-play fill-current text-white" height="45" viewBox="0 0 31 45" width="31"
+									xmlns="http://www.w3.org/2000/svg">
+									<path d="m15.5 7.5 22 30h-44z" fill-rule="evenodd" transform="matrix(0 1 -1 0 38 7)" /></svg>
+								<span class="js-state underline inline-block pt-5">Play</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				{%- endif -%}
+
+				<div class="animated-background {{ page.animatiedbg | prepend: 'bg-' }}"></div>
+			</div>
+		</div>
+	</div>
+</div>

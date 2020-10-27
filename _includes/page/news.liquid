@@ -1,0 +1,69 @@
+<div data-js-module="load-more">
+	<div class="js-list overflow-hidden">
+		<div class="flex flex-flex flex-wrap gutter-x js-list-inner">
+
+			{% for post in site.posts %}
+				{% if post.style == 'rectangle' %}
+					<a href="{{ post.url }}" class="block w-full group gutter-x gutter-b" data-aos="fade-up">
+						<div class="block">
+							<div class="w-full  js-media" data-id="{{ post.id }}">
+								<div class="block aspect-ratio-16/9 relative overflow-hidden">
+									<div class="block absolute w-full h-full top-0 left-0 z-30 js-image ">
+										<img class="w-full h-full object-cover lazyload text-white"
+											data-src="{{ post.media.image.cover | prepend: '/uploads/news/' | append: '.jpg' }}" class="w-full h-full object-cover lazyload"
+											alt="{{ post.media.image.cover | replace: '_', ' ' | capitalize_all }}" data-id="{{ post.id }}" />
+					
+									</div>
+									<div class="animated-background {{ post.animatiedbg | prepend: 'bg-' }}"></div>
+								</div>
+							</div>
+						</div>
+					
+						<div class="md:aspect-ratio-6/1 relative ">
+							<div class="flex flex-row relative md:absolute top-0 left-0 right-0 w-full gutter-t -gutter-x">
+								<div class="w-1/2 gutter-x">
+									<h4 class="group-hover:underline">{{ post.date | date: '%B %d, %Y' }}</h4>
+								</div>
+								<div class="w-1/2 gutter-x">
+									<h4 class="group-hover:underline">{{ post.category }}</h4>
+									<h3 class="group-hover:underline">{{ post.title }}
+									</h3>
+								</div>
+							</div>
+						</div>
+					</a>
+					{% else %}
+						{% if post.style == 'square-left' %}
+						<div class="w-1/2 md:w-1/4">
+							<div class="aspect-ratio-square"></div>
+						</div>
+						{% endif %}
+						<a href="{{ post.url }}"
+							class="block w-1/2 md:w-1/4 group gutter-x gutter-b" data-aos="fade-up">
+							<div class="aspect-ratio-square relative overflow-hidden js-media">
+								{%- include module/news/image.liquid -%}
+							</div>
+						
+							<div class="gutter-t">
+								<h4 class="underline">{{ post.category }}</h4>
+								<h3 class="group-hover:underline mb-3 md:mb-5">{{ post.title }}</h3>
+								<p>{{ post.content }}</p>
+							</div>
+						</a>
+						{% if post.style == 'square-right' %}
+						<div class="hidden md:block md:w-1/4">
+							<div class="aspect-ratio-square"></div>
+						</div>
+						{% endif %}
+				{% endif %}
+			{% endfor %}
+
+		</div>
+	</div>
+
+	<div class="w-full flex flex-row justify-end gutter-b-large gutter-x">
+		<div class="w-1/2 md:w-1/4 gutter-x">
+			<a href="/news/p2/" class="js-load-more">+ <span class="underline">Next Page</span></a>
+		</div>
+	</div>
+</div>

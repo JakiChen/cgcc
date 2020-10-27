@@ -1,0 +1,40 @@
+<div class="w-full flex flex-row flex-wrap gutter-x gutter-b-med gutter-t-large">
+	<div class="w-full md:w-3/4 mb-5 gutter-x">
+		<h2 class="text-big ">More</h2>
+	</div>
+	<div class="w-1/2 md:hidden"></div>
+</div>
+
+<!-- get related entries -->
+<div class="w-full flex flex-row flex-wrap gutter-x gutter-b-large">
+	{%- assign filter = page.title -%}
+	{%- assign relatedEntries = site.posts | where_exp: "item", "item.title != filter " -%}
+	
+	{% for post in relatedEntries limit: 6 %}
+		{% if forloop.last %}
+			<div class="w-1/2 md:w-1/4">&nbsp;</div>
+		{% endif %}
+		<a href="{{ post.url }}" class="block w-1/2 md:w-1/4 gutter-x gutter-b group" data-aos="fade-up" data-aos-delay="0">
+			<div class="relative aspect-ratio-square overflow-hidden js-media">
+				{%- include module/news/image.liquid -%}
+			</div>
+			<div class="relative">
+				<div class="flex flex-col relative w-full pt-3 xl:pt-5 ">
+					<h4 class="inline-block underline mb-2">{{ post.category }}</h4>
+					<h3 class="mb-6 group-hover:underline">{{ post.title }}</h3>
+					<p class="leading-none hidden lg:block">{{ post.content }}</p>
+				</div>
+			</div>
+		</a>
+		{% if forloop.first %}
+			<div class="w-1/2 md:w-1/4">&nbsp;</div>
+		{% endif %}
+	{% endfor %}
+
+</div>
+
+<div class="flex flex-row w-full justify-end gutter-x gutter-b-large">
+	<div class="w-1/2 md:w-1/4  gutter-x">
+		<a href="/news" class="">+ <span class="underline">All News</span></a>
+	</div>
+</div>

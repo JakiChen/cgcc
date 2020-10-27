@@ -1,0 +1,35 @@
+<div class="w-full flex flex-row flex-wrap gutter-x gutter-b-large gutter-t-med ">
+    {%- assign CDN = site.url | append: '/' -%}
+    <div class="w-full md:w-1/2 gutter-x md:column-gap-top mb-25 md:mb-0">
+        <div class="aspect-ratio-3/2 relative gutter-b-m overflow-hidden js-media">
+            <img data-src="{{ site.data.en_GB.about_US.office.basecamp.image | prepend: CDN | append: '.jpg' }}"
+                class="absolute top-0 left-0 w-full h-full lazyload overflow-hidden" />
+            <div class="animated-background bg-gray"></div>
+        </div>
+        <div class="flex flex-row -gutter-x ">
+            <div class="w-1/2 gutter-x">
+                <ul>
+                    {% for addr in site.data.en_GB.about_US.office.basecamp.addr %}
+                        <li>{{ addr }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="w-full md:w-1/2 gutter-x">
+        <div class="aspect-ratio-3/2 relative gutter-b-m overflow-hidden js-media">
+            <img data-src="{{ site.data.en_GB.about_US.office.global.image | prepend: CDN | append: '.jpg' }}"
+                class="absolute top-0 left-0 w-full h-full lazyload overflow-hidden" />
+            <div class="animated-background bg-gray"></div>
+        </div>
+        <div class="flex flex-row -gutter-x">
+            <div class="w-1/2 gutter-x">
+                <ul>
+                    {% for addr in site.data.en_GB.about_US.office.global.addr %}
+                        <li>{{ addr }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

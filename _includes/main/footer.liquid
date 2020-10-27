@@ -1,0 +1,96 @@
+<!-- contact -->
+<footer data-js-module="footer" data-midnight="white" data-section-title="Contact"
+	class="section py-3 mb:py-6 xxl:py-10 flex flex-col w-full bg-black text-white px-1-1/2 md:px-3 xl:px-4 xxl:px-5 "
+	id="contact">
+
+	<div class="flex flex-wrap mb-3 md:mb-6 xxl:mb-12">
+		<div class="w-full md:w-1/4 px-1-1/2 md:px-3 xl:px-4 xxl:px-5 mb-12 md:mb-0">
+			<h3 class="">Contact</h3>
+		</div>
+		<div class="hidden md:block md:w-1/4 px-1-1/2 md:px-3 xxl:px-5">
+			<p class="">Address</p>
+		</div>
+
+		<div class="w-1/2 md:w-1/4 px-1-1/2 md:px-3 xxl:px-5">
+			<p class="">Chapiter<br />{{ site.data.en_GB.about_US.office.basecamp.title }}</p>
+		</div>
+		<div class="w-1/2 md:w-1/4 px-1-1/2 md:px-3 xxl:px-5">
+			<p class="">{{ site.data.en_GB.about_US.office.basecamp.addr | join: '<br />' }}</p>
+		</div>
+	</div>
+
+	<div class="flex flex-wrap mb-10 lg:mb-14 md:mb-25 xxl:mb-12">
+		<div class="w-full md:w-1/2 px-1-1/2 md:px-3 xxl:px-5"></div>
+
+		<div class="w-1/2 md:w-1/4 px-1-1/2 md:px-3 xxl:px-5">
+			<p class="">Chapiter<br />{{ site.data.en_GB.about_US.office.global.title }}</p>
+		</div>
+		<div class="w-1/2 md:w-1/4 px-1-1/2 md:px-3 xxl:px-5">
+			<p class="">{{ site.data.en_GB.about_US.office.global.addr | join: '<br />' }}</p>
+		</div>
+	</div>
+
+	<div class="flex flex-wrap mb-10 lg:mb-14 md:mb-12 js-expand">
+		<div class="hidden lg:block lg:w-1/4 px-1-1/2 md:px-3 xxl:px-5"></div>
+		<div class="w-full md:w-1/4 px-1-1/2 md:px-3 xxl:px-5">
+			<span class="md:hidden float-right cursor-pointer js-expand-toggle">+</span>
+			<p>Work with us</p>
+		</div>
+		<div
+			class="w-full md:w-1/4 px-1-1/2 md:px-3 xxl:px-5 max-h-0 overflow-hidden md:max-h-full transition-all transition-500 js-expand-section">
+			<p>Inquiries</p>
+		</div>
+		<div
+			class="w-full md:w-1/4 px-1-1/2 md:px-3 xxl:px-5 max-h-0 overflow-hidden md:max-h-full transition-all transition-500 js-expand-section">
+			<a class="underline" href="mailto:{{ site.data.en_GB.about_US.business_mail | replace: '[at]', '@'}}" target="_blank">
+				{{ site.data.en_GB.about_US.business_mail | replace: '[at]', '@'}}
+			</a>
+		</div>
+	</div>
+
+	<div class="flex flex-wrap mb-10 lg:mb-14 md:mb-12 js-expand">
+		<div class="hidden lg:block lg:w-1/4 px-1-1/2 md:px-3 xxl:px-5"></div>
+		<div class="w-full md:w-1/4 px-1-1/2 md:px-3 xxl:px-5">
+			<span class="md:hidden float-right cursor-pointer js-expand-toggle">+</span>
+			<p>Join us</p>
+		</div>
+		<div
+			class="w-full md:w-1/4 px-1-1/2 md:px-3 xxl:px-5 max-h-0 overflow-hidden md:max-h-full transition-all transition-500 js-expand-section">
+			<p>Careers</p>
+		</div>
+		<div
+			class="w-full md:w-1/4 px-1-1/2 md:px-3 xxl:px-5 max-h-0 overflow-hidden md:max-h-full transition-all transition-500 js-expand-section">
+			<a class="underline" href="/careers/" target="_blank">View openings</a>
+		</div>
+	</div>
+
+	<div class="flex flex-wrap mb-10 lg:mb-14 md:mb-25 xxl:mb-12 js-expand">
+		<div class="hidden lg:block lg:w-1/4"></div>
+		<div class="w-full md:w-1/2 lg:w-1/4 px-1-1/2 md:px-3 xxl:px-5">
+			<span class="md:hidden float-right cursor-pointer js-expand-toggle">+</span>
+			<p>Follow us</p>
+		</div>
+		<div class="w-full md:w-1/4 px-1-1/2 md:px-3 xxl:px-5 max-h-0 overflow-hidden md:max-h-full transition-all transition-500 js-expand-section">
+			<ul>
+				{% for social in site.data.en_GB.about_US.social %}
+					<li><a class="underline" href="{{ social.url }}" target="_blank">{{ social.name }}</a></li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+
+	<div class="flex flex-wrap ">
+		<div class="hidden lg:block lg:w-1/4 px-1-1/2 md:px-3 xxl:px-5">
+
+		</div>
+		<div class="w-full lg:w-1/4 px-1-1/2 md:px-3 xxl:px-5 md:mb-4 lg:mb-0">
+			<p><a class="underline" href="/privacy-policy">Privacy Policy</a></p>
+		</div>
+		<div class="w-full md:w-1/2 lg:w-1/4 px-1-1/2 md:px-3 xxl:px-5">
+			<p>&copy;{{ 'now' | date: "%Y" }} Chapiter</p>
+		</div>
+		<div class="w-full md:w-1/2 lg:w-1/4 px-1-1/2 md:px-3 xxl:px-5">
+			<p>All Rights Reserved</p>
+		</div>
+	</div>
+</footer>

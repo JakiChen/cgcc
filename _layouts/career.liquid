@@ -1,0 +1,73 @@
+---
+layout: default
+---
+<div class="w-full pt-30vh relative leading-none overflow-hidden " data-aos="fade-up" data-aos-offset="-50">
+	<div class="flex flex-col md:flex-row items-end w-full gutter-x gutter-b" data-aos="fade-up">
+		<div class="w-full md:w-3/4 gutter-x mb-5 md:mb-0">
+			<h1 class="text-headline">{{ page.title }} | {{ page.jobinfo.location }}</h1>
+		</div>
+		<div class="w-full md:w-1/4 gutter-x md:pb-1 xl:pb-2 xxl:pb-3">
+			<p>{{ page.date | date: '%B %d, %Y' }}</p>
+		</div>
+	</div>
+</div>
+<div class="bg-gray w-full ">
+	<div class="mb-25 w-full ">&nbsp;</div>
+
+	{%- assign filter = page.jobinfo.id -%}
+	{%- assign job = site.data.careers | where: "id", filter -%}
+
+	{% for j in job %}
+		{% for jd in j.detail %}
+			{% if forloop.first %}
+				<div class="flex flex-col md:flex-row w-full gutter-x md:mb-25">
+					<div class="hidden md:block md:w-1/4 gutter-x gutter-b">
+					</div>
+					<div class="w-full md:w-1/4 gutter-x mb-5 md:mb-0">
+						<h3>{{ jd.title }}</h3>
+					</div>
+					<div class="w-full md:w-1/2 gutter-x mb-15 md:mb-0 copy">
+						{% for i in jd.info %}
+						<p class="mb-4">{{ i }} </p>
+						{% endfor %}
+					</div>
+				</div>
+				{% else %}
+				<div class="flex flex-col md:flex-row w-full gutter-x md:mb-25">
+					<div class="hidden md:block md:w-1/4 gutter-x gutter-b">
+					</div>
+					<div class="w-full md:w-1/4 gutter-x mb-5 md:mb-0">
+						<h3>{{ jd.title }}</h3>
+					</div>
+					<div class="w-full md:w-1/2 gutter-x mb-15 md:mb-0 copy">
+						{% for i in jd.info %}
+						<ul class="list-dashed md:-ml-10">
+							<li>{{ i }}</li>
+						</ul>
+						{% endfor %}
+					</div>
+				</div>
+			{% endif %}
+		{% endfor %}
+	{% endfor %}
+
+	<div class="flex flex-col md:flex-row w-full gutter-x gutter-b-large justify-start md:justify-end">
+		<div class="w-1/2 gutter-x gutter-b">
+			{% for link in page.links %}
+				{% capture LINK_URL %}
+					{% if link.url contains '@' %}
+						mailto:{{ link.url }}?subject={{ page.title }}
+					{% else %}
+						{{ link.url }}
+					{% endif %}
+				{% endcapture %}
+				<a href="{{  LINK_URL }}" target="_blank">
+					+ <span class="underline">{{ link.title }}</span>
+				</a>
+			{% endfor %}
+		</div>
+	</div>
+	
+	{% include module/careers/detail.image.liquid %}
+
+</div>

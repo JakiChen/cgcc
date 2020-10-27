@@ -1,0 +1,15 @@
+{%- assign sortedPage = site.data.en_GB.pages | where: 'title', filter -%}
+
+<div class="w-full pt-30vh relative leading-none overflow-hidden " data-aos="fade-up" data-aos-offset="-50">
+	{% for page in sortedPage %}
+	<div class="{{ page.summary.position | prepend: 'flex flex-col md:flex-row w-full gutter-x gutter-b ' }}" data-aos="fade-up">
+		<div class="w-full md:w-3/4 gutter-x mb-5 md:mb-0">
+			<h1 class="text-headline">{{ page.headline }}</h1>
+		</div>
+		<div class="w-full md:w-1/4 gutter-x md:pb-1 xl:pb-2 xxl:pb-3">
+			<p>{{ page.summary.content }}</p>
+		</div>
+	</div>
+	{% endfor %}
+</div>
+

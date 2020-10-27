@@ -1,0 +1,68 @@
+<!-- main navigation -->
+<header class="w-full fixed z-50 " data-js-module="navigation">
+	<nav class="fixed w-full overflow-hidden z-20  dark:bg-black dark:text-white transition-all transition-500"
+		data-background="{{ page.bgcolor | prepend: 'bg-' }}">
+		<div class="w-full flex flex-col ">
+			<div class="flex flex-row justify-between gutter-x w-full py-1 js-nav-bar">
+				<div class="w-full md:w-1/4 gutter-x relative">
+					<a href="/" class="hidden md:inline-block " data-title="{{ site.title }}">{{ site.title }}</a>
+					<a href="/"
+						class="inline-flex w-full justify-between md:hidden js-toggle-dropdown-nav text-1xl transition transition-all "
+						data-title="{{ site.title }}">
+
+						<span class="inline-block">c|</span>
+						<span class="inline-block pl-1 js-nav-mobile-active-section " data-page-title="">+</span>
+					</a>
+				</div>
+				<div class="hidden md:block w-1/4 sm:w-1/4 gutter-x relative">
+					<span class="cursor-pointer js-nav-reveal inline-block ">
+						<a href="#" class="js-expand-nav js-nav-active-section">+</a>
+						<div class="h-0 overflow-hidden js-nav-dropdown-desktop">
+							<ul class="nav-items ">
+								{%- include module/nav.items.liquid -%}
+							</ul>
+						</div>
+					</span>
+				</div>
+				<div class="hidden md:block w-1/4 sm:w-1/4 gutter-x">
+					<span>
+						{%- unless page.layout == 'page' -%}
+							{{ page.title | capitalize_all }}
+						{%- endunless -%}
+					</span>
+				</div>
+				<div class="hidden md:block sm:w-1/4 gutter-x flex flex-col text-right md:text-left ">
+					<div class="js-clock ">
+						<span class="w-10 inline-block">PEK</span>
+						<span class="js-clock-sf">00:00:00</span>
+					</div>
+					<div class="js-clock ">
+						<span class="w-10 inline-block">PAR</span>
+						<span class="js-clock-ny">00:00:00</span>
+					</div>
+				</div>
+			</div>
+			<div class="w-full h-0 overflow-hidden block md:hidden js-nav-dropdown-mobile">
+				<div class="gutter-x py-1 h-full flex flex-col md:flex-row justify-between">
+
+					<div class="text-1xl gutter-x  ">
+						<ul class="nav-items leading-none">
+							{%- include module/nav.items.liquid -%}
+						</ul>
+					</div>
+					<div class="block md:hidden sm:w-1/4  pb-12 text-1xl gutter-x ">
+						<div class="js-clock ">
+							<span class="w-14 inline-block">PEK</span>
+							<span class="js-clock-sf">00:00:00</span>
+						</div>
+						<div class="js-clock ">
+							<span class="w-14 inline-block">PAR</span>
+							<span class="js-clock-ny">00:00:00</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+</header>

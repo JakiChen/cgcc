@@ -13,7 +13,7 @@ author:
 ---
 
 {% capture s1 %}
- capture2
+ capture2 update now 
 {% endcapture %}
 
 {% capture s2 %}
